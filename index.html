@@ -36,9 +36,9 @@
                 <span class="error-amount error-message"></span>
                 <input name="amount" id="amount" class="form__input--amount" type="number" min="0" value="" placeholder="0" step="0.05" required />
               </div>
-              <fieldset class="form__group form__group--tip">
+              <div class="form__group form__group--tip">
                 <div class="form__group--info">
-                  <legend for="tip" class="tip-legend" aria-label="Select tip in %">Select Tip %</legend>
+                  <legend for="tip" class="tip-legend">Select Tip %</legend>
                   <span class="error-tip error-message"></span>
                 </div>
                 <div class="radio-group">
@@ -111,7 +111,7 @@
                     <label for="tip-custom" class="sr-only">Custom value</label>
                   </div>
                 </div>
-              </fieldset>
+              </div>
 
               <div class="form__group form__group--n-people">
                 <label for="">Number of People</label>
@@ -124,15 +124,15 @@
             <div class="card__summary-lines">
               <div class="summary__line">
                 <div class="summary__label">
-                  <p class="summary__title" aria-label="tip per person">Tip Amount</p>
-                  <p class="summary__description" aria-label="per person" aria-hidden="true">/ person</p>
+                  <p class="summary__title">Tip Amount</p>
+                  <p class="summary__description" aria-hidden="true">/ person</p>
                 </div>
                 <output for="amount tip-5 tip-10 tip-15 tip-25 tip-50 tip-custom people" class="summary__amount tip-amount">$0.00</output>
               </div>
               <div class="summary__line">
                 <div class="summary__label">
-                  <p class="summary__title" aria-label="total per person">Total</p>
-                  <p class="summary__description" aria-label="per person" aria-hidden="true">/ person</p>
+                  <p class="summary__title">Total</p>
+                  <p class="summary__description" aria-hidden="true">/ person</p>
                 </div>
                 <output for="amount tip-5 tip-10 tip-15 tip-25 tip-50 tip-custom people" class="summary__amount grand-total">$0.00</output>
               </div>
