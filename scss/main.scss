@@ -279,6 +279,10 @@ input:invalid:focus {
     gap: 3rem;
   }
 
+  .radio-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .card__summary {
     display: flex;
     flex-direction: column;
