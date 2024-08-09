@@ -252,6 +252,18 @@ input:invalid:focus {
   color: $clr-brownish-red;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 @media screen and (min-width: 50em) {
   body {
     padding-block: 0;

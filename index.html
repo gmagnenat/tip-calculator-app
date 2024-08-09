@@ -112,25 +112,25 @@
               <div class="form__group form__group--n-people">
                 <label for="">Number of People</label>
                 <span class="custom-tip-error error-people error-message" aria-live="polite"></span>
-                <input class="form__input--n-people" type="number" min="1" placeholder="1" required />
+                <input class="form__input--n-people" id="people" type="number" min="1" placeholder="1" required />
               </div>
             
           </div>
-          <div class="card__summary" aria-live="polite">
+          <div class="card__summary">
             <div class="card__summary-lines">
               <div class="summary__line">
                 <div class="summary__label">
-                  <p class="summary__title">Tip Amount</p>
-                  <p class="summary__description" aria-label="per person">/ person</p>
+                  <p class="summary__title" aria-label="tip per person">Tip Amount</p>
+                  <p class="summary__description" aria-label="per person" aria-hidden="true">/ person</p>
                 </div>
-                <p class="summary__amount tip-amount">$0.00</p>
+                <output for="amount tip-5 tip-10 tip-15 tip-25 tip-50 tip-custom people" class="summary__amount tip-amount">$0.00</output>
               </div>
               <div class="summary__line">
                 <div class="summary__label">
-                  <p class="summary__title">Total</p>
-                  <p class="summary__description" aria-label="per person">/ person</p>
+                  <p class="summary__title" aria-label="total per person">Total</p>
+                  <p class="summary__description" aria-label="per person" aria-hidden="true">/ person</p>
                 </div>
-                <p class="summary__amount grand-total">$0.00</p>
+                <output for="amount tip-5 tip-10 tip-15 tip-25 tip-50 tip-custom people" class="summary__amount grand-total">$0.00</output>
               </div>
             </div>
             

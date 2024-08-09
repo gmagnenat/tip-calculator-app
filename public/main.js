@@ -100,8 +100,12 @@ function calculateAndDisplayAmounts() {
   const tipValPerson = tipTotal / peopleVal;
   const amountValPerson = newAmount / peopleVal;
 
-  tipPerPerson.textContent = `$${roundToUpper05(tipValPerson)}`;
-  totalPerPerson.textContent = `$${roundToUpper05(amountValPerson)}`;
+  tipPerPerson.innerHTML = `<span class="sr-only">Tip per person is</span>$${roundToUpper05(
+    tipValPerson
+  )}`;
+  totalPerPerson.innerHTML = `<span class="sr-only">Total per person is</span>$${roundToUpper05(
+    amountValPerson
+  )}`;
 }
 
 function attachEventListeners() {
