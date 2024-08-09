@@ -20,10 +20,13 @@
     <script src="./main.js" defer></script>
   </head>
   <body>
-    <div class="header">
-      <img class="header__logo" src="./images/logo.svg" alt="splitter app" />
-    </div>
     <main class="main">
+      <div class="header">
+        <h1 class="header__heading">
+          <span class="sr-only">Splitter App</span>
+          <img class="header__logo" src="./images/logo.svg" alt="" />
+        </h1>
+      </div>
       <div class="card">
         <div class="card__body">
           <div class="card__form">
@@ -105,6 +108,7 @@
                       placeholder="Custom"
                       min="0"
                     />
+                    <label for="tip-custom" class="sr-only">Custom value</label>
                   </div>
                 </div>
               </fieldset>
@@ -134,9 +138,8 @@
               </div>
             </div>
             
-            <button class="form__reset-button" reset>reset</button>
-          </div> <!-- end summary-->
-          
+            <button class="form__reset-button">reset</button>
+          </div> <!-- end summary-->      
         </form>
         </div>
       </div>

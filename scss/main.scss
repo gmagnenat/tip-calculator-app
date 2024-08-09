@@ -16,7 +16,12 @@ body {
 }
 
 .header {
-  padding-block: 3.125rem;
+  margin-bottom: 3.125rem;
+}
+
+.header__heading {
+  display: flex;
+  justify-content: center;
 }
 
 .card {

@@ -142,6 +142,12 @@ function attachEventListeners() {
       calculateAndDisplayAmounts();
     }
   });
+
+  resetButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    form.reset();
+    init();
+  });
 }
 
 function init() {
