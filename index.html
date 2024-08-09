@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/main.scss" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <div class="header">
+      <img class="header__logo" src="./images/logo.svg" alt="splitter app" />
+    </div>
+    <main class="main">
+      <div class="card">
+        <div class="card__body">
+          <div class="card__form">
+            <form class="form" novalidate>
+              <div class="form__group form__group--amount">
+                <label for="amount" class="form__label">Bill</label>
+                <span class="error-amount error-message"></span>
+                <input name="amount" id="amount" class="form__input--amount" type="number" min="0" value="" placeholder="0" required />
+              </div>
+              <fieldset class="form__group form__group--tip">
+                <div class="form__group--info">
+                  <legend for="tip" class="tip-legend" aria-label="Select tip in %">Select Tip %</legend>
+                  <span class="error-tip error-message"></span>
+                </div>
+                <div class="radio-group">
+                  <div class="input-group">
+                    <input
+                      class="radio-button"
+                      type="radio"
+                      name="tip"
+                      id="tip-5"
+                      value="5"
+                    />
+                    <label class="radio-label" for="tip-5">5%</label>
+                  </div>
+                  <div class="input-group">
+                    <input
+                      class="radio-button"
+                      type="radio"
+                      name="tip"
+                      id="tip-10"
+                      value="10"
+                    />
+                    <label class="radio-label" for="tip-10">10%</label>
+                  </div>
+                  <div class="input-group">
+                    <input
+                      class="radio-button"
+                      type="radio"
+                      name="tip"
+                      id="tip-15"
+                      value="15"
+                    />
+                    <label class="radio-label" for="tip-15">15%</label>
+                  </div>
+                  <div class="input-group">
+                    <input
+                      class="radio-button"
+                      type="radio"
+                      name="tip"
+                      id="tip-25"
+                      value="25"
+                    />
+                    <label class="radio-label" for="tip-25">25%</label>
+                  </div>
+                  <div class="input-group">
+                    <input
+                      class="radio-button"
+                      type="radio"
+                      name="tip"
+                      id="tip-50"
+                      value="50"
+                    />
+                    <label class="radio-label" for="tip-50">50%</label>
+                  </div>
+                  <div class="input-group">
+                    <input
+                      class="radio-button custom-tip-radio"
+                      type="radio"
+                      name="tip"
+                      id="tip-custom"
+                      value="0"
+                    />
+                    <input
+                      type="number"
+                      tabindex="-1"
+                      class="form__input--custom-tip"
+                      name="tip-custom-input"
+                      placeholder="Custom"
+                      min="0"
+                    />
+                  </div>
+                </div>
+              </fieldset>
+
+              <div class="form__group form__group--n-people">
+                <label for="">Number of People</label>
+                <span class="custom-tip-error error-people error-message" aria-live="polite"></span>
+                <input class="form__input--n-people" type="number" min="1" placeholder="1" required />
+              </div>
+            
+          </div>
+          <div class="card__summary" aria-live="polite">
+            <div class="card__summary-lines">
+              <div class="summary__line">
+                <div class="summary__label">
+                  <p class="summary__title">Tip Amount</p>
+                  <p class="summary__description" aria-label="per person">/ person</p>
+                </div>
+                <p class="summary__amount tip-amount">$0.00</p>
+              </div>
+              <div class="summary__line">
+                <div class="summary__label">
+                  <p class="summary__title">Total</p>
+                  <p class="summary__description" aria-label="per person">/ person</p>
+                </div>
+                <p class="summary__amount grand-total">$0.00</p>
+              </div>
+            </div>
+            
+            <button class="form__reset-button" reset>reset</button>
+          </div> <!-- end summary-->
+          
+        </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
