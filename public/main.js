@@ -50,7 +50,7 @@ function validateInputs(amountVal, peopleVal) {
   }
 
   if (getSelectedTipValue() <= 0) {
-    showError(tipErrorMessage, "Select a tip.");
+    showError(tipErrorMessage, "Select a tip");
     isValid = false;
   } else {
     clearError(tipErrorMessage);
@@ -86,6 +86,11 @@ function clearError(element) {
   }
 }
 
+function clearTotals() {
+  tipPerPerson.innerHTML = "";
+  totalPerPerson.innerHTML = "";
+}
+
 function calculateAndDisplayAmounts() {
   const amountVal = parseFloat(amount.value);
   const peopleVal = parseInt(people.value, 10);
@@ -99,6 +104,8 @@ function calculateAndDisplayAmounts() {
   const newAmount = amountVal + tipTotal;
   const tipValPerson = tipTotal / peopleVal;
   const amountValPerson = newAmount / peopleVal;
+
+  clearTotals();
 
   tipPerPerson.innerHTML = `<span class="sr-only">Tip per person is</span>$${roundToUpper05(
     tipValPerson
